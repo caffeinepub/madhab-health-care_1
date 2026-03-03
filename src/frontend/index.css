@@ -1,0 +1,140 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --radius: 0.75rem;
+
+    /* Madhab Health Care — Green & Earthy palette (OKLCH L C H) */
+    /* Primary Green: #2d6a4f  → oklch(0.42 0.11 158) */
+    /* Light Green:   #74c69d  → oklch(0.73 0.12 158) */
+    /* Earthy Beige:  #f4f1eb  → oklch(0.96 0.02 90)  */
+    /* White:         #ffffff  → oklch(1 0 0)           */
+    /* Text Dark:     #2c3e50  → oklch(0.28 0.04 234)  */
+    /* Dark Green:    #1b4332  → oklch(0.30 0.09 158)  */
+
+    --background: 0.96 0.02 90;
+    --foreground: 0.28 0.04 234;
+    --card: 1 0 0;
+    --card-foreground: 0.28 0.04 234;
+    --popover: 1 0 0;
+    --popover-foreground: 0.28 0.04 234;
+    --primary: 0.42 0.11 158;
+    --primary-foreground: 1 0 0;
+    --secondary: 0.73 0.12 158;
+    --secondary-foreground: 0.28 0.04 234;
+    --muted: 0.94 0.015 90;
+    --muted-foreground: 0.50 0.04 158;
+    --accent: 0.73 0.12 158;
+    --accent-foreground: 0.28 0.04 234;
+    --destructive: 0.577 0.245 27.325;
+    --destructive-foreground: 1 0 0;
+    --border: 0.88 0.03 90;
+    --input: 0.92 0.02 90;
+    --ring: 0.42 0.11 158;
+    --chart-1: 0.42 0.11 158;
+    --chart-2: 0.73 0.12 158;
+    --chart-3: 0.96 0.02 90;
+    --chart-4: 0.60 0.15 158;
+    --chart-5: 0.30 0.09 158;
+    --sidebar: 0.30 0.09 158;
+    --sidebar-foreground: 1 0 0;
+    --sidebar-primary: 0.73 0.12 158;
+    --sidebar-primary-foreground: 0.28 0.04 234;
+    --sidebar-accent: 0.42 0.11 158;
+    --sidebar-accent-foreground: 1 0 0;
+    --sidebar-border: 0.35 0.09 158;
+    --sidebar-ring: 0.73 0.12 158;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Nunito', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  h1, h2, h3, h4 {
+    font-family: 'Playfair Display', 'Nunito', serif;
+  }
+}
+
+@layer utilities {
+  .font-display {
+    font-family: 'Playfair Display', serif;
+  }
+
+  .font-body {
+    font-family: 'Nunito', sans-serif;
+  }
+
+  /* Smooth section reveal */
+  .reveal {
+    opacity: 0;
+    transform: translateY(24px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+  }
+
+  .reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  /* WhatsApp pulse */
+  @keyframes whatsapp-pulse {
+    0%, 100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.4); }
+    50% { box-shadow: 0 0 0 12px rgba(37, 211, 102, 0); }
+  }
+
+  .whatsapp-pulse {
+    animation: whatsapp-pulse 2s ease-in-out infinite;
+  }
+
+  /* Hero leaf float */
+  @keyframes leaf-float {
+    0%, 100% { transform: translateY(0) rotate(0deg); }
+    33% { transform: translateY(-12px) rotate(3deg); }
+    66% { transform: translateY(6px) rotate(-2deg); }
+  }
+
+  .leaf-float {
+    animation: leaf-float 8s ease-in-out infinite;
+  }
+
+  .leaf-float-delayed {
+    animation: leaf-float 10s ease-in-out infinite reverse;
+    animation-delay: -3s;
+  }
+
+  /* Card hover lift */
+  .card-lift {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .card-lift:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 16px 40px rgba(45, 106, 79, 0.18);
+  }
+
+  /* Accordion smooth transition */
+  .accordion-content {
+    overflow: hidden;
+    transition: max-height 0.35s ease, opacity 0.3s ease;
+    max-height: 0;
+    opacity: 0;
+  }
+
+  .accordion-content.open {
+    max-height: 500px;
+    opacity: 1;
+  }
+}
