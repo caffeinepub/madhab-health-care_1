@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 const navLinks = [
   { label: "Home", href: "#home" },
   { label: "Services", href: "#services" },
-  { label: "About", href: "#about" },
+  { label: "Certificates", href: "#certificates" },
   { label: "Testimonials", href: "#testimonials" },
   { label: "FAQ", href: "#faq" },
   { label: "Contact", href: "#contact" },
@@ -49,33 +49,19 @@ export default function Navbar() {
             onClick={() => scrollTo("#home")}
             className="flex items-center gap-2.5 group"
           >
-            <div className="w-10 h-10 rounded-xl bg-brand-green flex items-center justify-center shadow-green group-hover:scale-105 transition-transform">
-              <svg
-                viewBox="0 0 40 40"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-                className="w-7 h-7"
-                aria-hidden="true"
-              >
-                <path
-                  d="M20 6C14 6 8 10 8 18c0 5 3 8 6 10 1.5.8 3 1.3 4 1.5V36h4v-6.5c1-.2 2.5-.7 4-1.5 3-2 6-5 6-10 0-8-6-12-12-12z"
-                  fill="white"
-                  opacity="0.9"
-                />
-                <path
-                  d="M20 10c-3 0-5 2-5 5s2 5 5 5 5-2 5-5-2-5-5-5z"
-                  fill="white"
-                  opacity="0.6"
-                />
-                <circle cx="20" cy="15" r="2.5" fill="#74c69d" />
-              </svg>
+            <div className="w-10 h-10 rounded-full overflow-hidden shadow-green group-hover:scale-105 transition-transform">
+              <img
+                src="/assets/uploads/IMG_6340-1.jpeg"
+                alt="Madhab Health Care Logo"
+                className="w-full h-full object-cover"
+              />
             </div>
             <div className="flex flex-col leading-tight">
               <span className="font-display font-bold text-brand-green text-lg leading-tight">
                 Madhab Health Care
               </span>
-              <span className="text-[11px] text-brand-green/70 font-body tracking-wide">
-                Natural Healing · Mathura
+              <span className="text-[11px] text-brand-green/70 font-body tracking-wide text-left block w-full">
+                Radha Madhav Colony, Radhakund,
               </span>
             </div>
           </button>

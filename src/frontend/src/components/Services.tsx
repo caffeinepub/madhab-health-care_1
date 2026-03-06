@@ -116,54 +116,6 @@ const services = [
       </svg>
     ),
   },
-  {
-    title: "Stress & Relaxation Therapy",
-    description:
-      "Holistic therapy to release stress, anxiety, and restore inner calm. A sanctuary of peace for your body, mind, and spirit.",
-    icon: (
-      <svg
-        viewBox="0 0 80 80"
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg"
-        className="w-14 h-14"
-        aria-hidden="true"
-      >
-        {/* Lotus flower */}
-        <path
-          d="M40 58 C34 52 28 46 28 38 C28 32 34 28 40 28 C46 28 52 32 52 38 C52 46 46 52 40 58Z"
-          fill="#74c69d"
-          fillOpacity="0.5"
-          stroke="#2d6a4f"
-          strokeWidth="2"
-        />
-        <path
-          d="M28 40 C22 34 18 26 23 20 C26 17 32 17 34 22 C34 22 30 32 28 40Z"
-          fill="#74c69d"
-          fillOpacity="0.4"
-          stroke="#2d6a4f"
-          strokeWidth="2"
-        />
-        <path
-          d="M52 40 C58 34 62 26 57 20 C54 17 48 17 46 22 C46 22 50 32 52 40Z"
-          fill="#74c69d"
-          fillOpacity="0.4"
-          stroke="#2d6a4f"
-          strokeWidth="2"
-        />
-        {/* Water lines */}
-        <path
-          d="M22 60 Q28 57 34 60 Q40 63 46 60 Q52 57 58 60"
-          stroke="#2d6a4f"
-          strokeWidth="2"
-          fill="none"
-          strokeLinecap="round"
-          opacity="0.5"
-        />
-        <circle cx="40" cy="36" r="5" fill="#2d6a4f" opacity="0.8" />
-        <circle cx="40" cy="36" r="2.5" fill="white" />
-      </svg>
-    ),
-  },
 ];
 
 function useReveal(ref: React.RefObject<HTMLElement | null>) {
@@ -264,7 +216,7 @@ export default function Services() {
         </div>
 
         {/* Services: 3 circular badge icons in a row */}
-        <div className="grid grid-cols-1 sm:grid-cols-3 gap-12 lg:gap-16">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-12 lg:gap-16 max-w-2xl mx-auto">
           {services.map((service, i) => (
             <article
               key={service.title}

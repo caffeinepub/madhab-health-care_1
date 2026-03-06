@@ -1,5 +1,6 @@
 import AcupuncturePoints from "@/components/AcupuncturePoints";
 import BookingForm from "@/components/BookingForm";
+import Certificates from "@/components/Certificates";
 import FAQ from "@/components/FAQ";
 import Footer from "@/components/Footer";
 import Hero from "@/components/Hero";
@@ -22,6 +23,7 @@ export default function App() {
         <Hero />
         <Services />
         <AcupuncturePoints />
+        <Certificates />
         <Testimonials />
         <BookingForm />
         <FAQ />

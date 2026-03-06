@@ -9,17 +9,12 @@ export default function Hero() {
       id="home"
       className="relative min-h-screen flex items-center justify-center overflow-hidden"
     >
-      {/* Background photo with dark green overlay */}
-      <div
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-        style={{ backgroundImage: "url('/assets/uploads/IMG_6272-1.jpeg')" }}
-        aria-hidden="true"
-      />
+      {/* Solid dark green background */}
       <div
         className="absolute inset-0"
         style={{
           background:
-            "linear-gradient(135deg, rgba(27,67,50,0.82) 0%, rgba(45,106,79,0.72) 50%, rgba(27,67,50,0.80) 100%)",
+            "linear-gradient(135deg, #1b4332 0%, #2d6a4f 50%, #1b4332 100%)",
         }}
         aria-hidden="true"
       />
@@ -54,13 +49,6 @@ export default function Hero() {
 
       {/* Main centered content */}
       <div className="relative z-10 text-center max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-32 pt-44">
-        {/* Badge */}
-        <div className="inline-flex items-center gap-2 bg-white/15 backdrop-blur-sm border border-white/25 rounded-full px-5 py-2 mb-8">
-          <span className="text-white/90 text-sm font-semibold tracking-wide">
-            🌿 Radhakund, Mathura, U.P.
-          </span>
-        </div>
-
         {/* Headline */}
         <h1 className="font-display text-5xl sm:text-6xl lg:text-7xl font-bold text-white leading-tight mb-6">
           Heal Naturally.
